@@ -3,41 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <title>learning web</title>
+    <script>
+        function detect() {
+            var age = document.getElementById("age").value;
+            if(age > 150 || age < 0 || isNaN(age)){
+                alert("请输入正确的年龄！");
+            }
+        }
+    </script>
 </head>
 <body>
-<p id="demo">我的第一个段落</p>
-<button onclick="add()">add</button>
-<button onclick="cycle()">cars</button>
-<button onclick="object()">object</button>
-<script>
-    //浏览器访问 id="demo" 的 HTML 元素并把它的内容替换为 "My First JavaScript"
-    document.getElementById("demo").innerText="我的第一段JavaScript";
+<div>
+    <form>
+        <fieldset>
+            <legend>个人信息登记表</legend>
+            姓名：<br/>
+            <input type="text" name="name" id="name"
+                   required><br/>
+            性别：<br/>
+            <input type="text" name="sex" id="sex"
+                   pattern="[男女]" required><br/>
+            年龄：<br/>
+            <input type="text" name="age" id="age"
+                   onblur="detect()" required><br/>
+            手机号码：<br/>
+            <input type="text" name="phone" id="phone"
+                   pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$" required><br/>
+            <br/>
+            <input type="submit" name="submit">
+        </fieldset>
+    </form>
+</div>
 
-    function add() {
-        var x = 6;
-        var y = x + 4;
-        document.write(x + " + " + y + " = "+ (x+y) + "<br/>");
-    }
 
-    function cycle() {
-        var cars = new Array();
-        cars[0] = "Audi";
-        cars[1] = "BMW";
-        cars[2] = "Volos";
+<!--<p id="demo">我的第一个段落</p>-->
+<!--<button onclick="add()">add</button>-->
+<!--<button onclick="cycle()">cars</button>-->
+<!--<button onclick="object()">object</button>-->
 
-        for(var i = 0;i<cars.length;i++){
-            document.write(cars[i] + "<br/>");
-        }
-    }
+<!--<p>Please input a number between 5 and 10:</p>-->
+<!--<input id="num" type="text">-->
+<!--<button type="button" onclick="exception()">enter</button>-->
+<!--<p id="mess"></p>-->
 
-    function object() {
-        var person = {firstname:"zhan",lastname:"ping"};
-        document.write(person.firstname + " " + person.lastname + "<br/>");
-        cat = new Object();
-        cat.sex = "female";
-        cat.color = "orange";
-        document.write(cat.color + " " + cat.sex + "<br/>");
-    }
-</script>
+<!--<script>-->
+    <!--//浏览器访问 id="demo" 的 HTML 元素并把它的内容替换为 "My First JavaScript"-->
+    <!--document.getElementById("demo").innerText="我的第一段JavaScript";-->
+
+    <!--function add() {-->
+        <!--var x = 6;-->
+        <!--var y = x + 4;-->
+        <!--document.write(x + " + " + y + " = "+ (x+y) + "<br/>");-->
+    <!--}-->
+
+    <!--function cycle() {-->
+        <!--var cars = new Array();-->
+        <!--cars[0] = "Audi";-->
+        <!--cars[1] = "BMW";-->
+        <!--cars[2] = "Volos";-->
+
+        <!--for(var i = 0;i<cars.length;i++){-->
+            <!--document.write(cars[i] + "<br/>");-->
+        <!--}-->
+    <!--}-->
+
+    <!--function object() {-->
+        <!--var person = {firstname:"zhan",lastname:"ping"};-->
+        <!--document.write(person.firstname + " " + person.lastname + "<br/>");-->
+        <!--cat = new Object();-->
+        <!--cat.sex = "female";-->
+        <!--cat.color = "orange";-->
+        <!--document.write(cat.color + " " + cat.sex + "<br/>");-->
+    <!--}-->
+
+    <!--function exception(){-->
+        <!--try{-->
+            <!--var x = document.getElementById("num").value;-->
+            <!--document.write(x);-->
+            <!--if(x=="")throw "empty";-->
+            <!--if(isNaN(x))throw "not a number";-->
+            <!--if(x>10)throw "too high"-->
+            <!--if(x<5)throw "too small"-->
+        <!--}-->
+        <!--catch (err){-->
+            <!--var y = document.getElementById("mess").value;-->
+            <!--y.innerHTML = "error:" + err + ".";-->
+        <!--}-->
+    <!--}-->
+
+<!--</script>-->
 </body>
 </html>
