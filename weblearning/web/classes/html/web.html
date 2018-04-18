@@ -6,17 +6,37 @@
 </head>
 <body>
 <p id="demo">我的第一个段落</p>
-<p id="demo2">我的第一个段落</p>
-<button onclick="myFuntion()">click</button>
+<button onclick="add()">add</button>
+<button onclick="cycle()">cars</button>
+<button onclick="object()">object</button>
 <script>
-    <!--浏览器访问 id="demo" 的 HTML 元素并把它的内容替换为 "My First JavaScript"-->
+    //浏览器访问 id="demo" 的 HTML 元素并把它的内容替换为 "My First JavaScript"
     document.getElementById("demo").innerText="我的第一段JavaScript";
-    function myFuntion() {
-        document.getElementById("demo2").innerHTML="我的第一段JavaScript";
-        document.write("<p>我的第一段JavaScript</p>")
-        var x=6;
-        var y=x+4;
-        document.write("糟糕！"+y);
+
+    function add() {
+        var x = 6;
+        var y = x + 4;
+        document.write(x + " + " + y + " = "+ (x+y) + "<br/>");
+    }
+
+    function cycle() {
+        var cars = new Array();
+        cars[0] = "Audi";
+        cars[1] = "BMW";
+        cars[2] = "Volos";
+
+        for(var i = 0;i<cars.length;i++){
+            document.write(cars[i] + "<br/>");
+        }
+    }
+
+    function object() {
+        var person = {firstname:"zhan",lastname:"ping"};
+        document.write(person.firstname + " " + person.lastname + "<br/>");
+        cat = new Object();
+        cat.sex = "female";
+        cat.color = "orange";
+        document.write(cat.color + " " + cat.sex + "<br/>");
     }
 </script>
 </body>
