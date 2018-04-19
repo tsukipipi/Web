@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doc tree</title>
+</head>
+<body>
+<div id = "div1">
+    <p id = "p1">这是一个被删除的结点。</p>
+</div>
+
+<script>
+    var para = document.createElement("p");
+    var text = document.createTextNode("这是一个用JavaScript创建的结点。");
+    para.appendChild(text);
+    var d = document.getElementById("div1");
+    d.appendChild(para);
+
+    var  child = document.getElementById("p1");
+    child.parentNode.removeChild(child);
+</script>
+</body>
+</html>
