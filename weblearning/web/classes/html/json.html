@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>use json</title>
+</head>
+<body>
+<h2>通过解析JSON文件来创建对象</h2>
+<p>
+    First Name: <span id="fname"></span><br/>
+    Last Name: <span id="lname"></span><br/>
+</p>
+
+<script>
+    var txt = '{"employees":[{"firstname":"Bill","lastname":"Gates"},' +
+        '{"firstname":"George","lastname":"Bush"},' +
+        '{"firstname":"Thomas","lastname":"Carter"}]}';
+    var objs = eval("(" + txt + ")");
+    document.getElementById("fname").innerHTML = objs.employees[1].firstname;
+    document.getElementById("lname").innerHTML = objs.employees[1].lastname;
+</script>
+</body>
+</html>
