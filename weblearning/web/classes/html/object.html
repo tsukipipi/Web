@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create object</title>
+
+    <script>
+        function object1() {
+            var person = {firstname:"zhan",lastname:"ping"};
+            document.write(person.firstname + " " + person.lastname + "<br/>");
+        }
+
+        function object2() {
+            cat = new Object();
+            cat.sex = "female";
+            cat.color = "orange";
+            cat.name = "mimipon";
+            document.write(cat.name + ":" + cat.color + "、" + cat.sex + "<br/>");
+        }
+
+        function book(title,authod) {
+            this.title = title;
+            this.authod = authod
+        }
+
+        var abook = new book("python","Eric");
+        document.write(abook.title + " write by" + abook.authod + "<br/>");
+    </script>
+</head>
+<body>
+<button onclick="object1()">person</button><br/>
+<button onclick="object2()">cat</button><br/>
+</body>
+</html>

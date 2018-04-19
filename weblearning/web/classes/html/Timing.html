@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timing</title>
+    <script>
+        var time = 0;
+        var t;
+        function timestart() {
+            document.getElementById("currenttime").value = time;
+            time += 1;
+            t = setTimeout("timestart()",1000);
+        }
+        function timestop() {
+            clearTimeout(t);
+        }
+        function timeclean() {
+            time = 0;
+            document.getElementById("currenttime").value = 0;
+        }
+    </script>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>计时器</legend>
+        <input type="text" id="currenttime"><br/><br/>
+        <input type="button" id = "start" value="开始" onclick="timestart()">
+        <input type="button" id = "stop" value="停止" onclick = "timestop()">
+        <input type="button" id = "clean" value="清零" onclick = "timeclean()">
+    </fieldset>
+</form>
+</body>
+</html>
