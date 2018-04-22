@@ -4,14 +4,16 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <servlet>
-        <!-- 类名 -->
+        <!-- <servlet-name>是要注册的servlet的类名 -->
         <servlet-name>HelloServlet</servlet-name>
-        <!-- 所在的包 -->
+        <!-- 要注册的servlet所在的包 -->
         <servlet-class>com.pipi.HelloServlet</servlet-class>
     </servlet>
+    <!-- <servlet-mapping>是用来配置我们注册的组件的访问路径 -->
     <servlet-mapping>
+        <!-- 与前面的servlet类名一致 -->
         <servlet-name>HelloServlet</servlet-name>
-        <!-- 访问的网址 -->
+        <!-- url路径,组件的访问路径 -->
         <url-pattern>/Tomcat/HelloServlet</url-pattern>
     </servlet-mapping>
 </web-app>
