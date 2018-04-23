@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple search</title>
+
+    <script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+
+    <style>
+        div.simpleSearchDiv{
+            background-color: #C40000;
+            width: 300px;
+            margin: 10px 20px 40px;
+            padding: 1px;
+            height: 40px;
+            display: block;
+        }
+        /*outline:none:把边框去掉
+        transparent:让边框透明化*/
+        div.simpleSearchDiv input{
+            width: 225px;
+            border: 1px solid transparent;
+            height: 34px;
+            margin: 2px;
+            outline:none;
+        }
+        div.simpleSearchDiv button{
+            width: 60px;
+            border: 1px solid transparent;
+            background-color: #C40000;
+            color: white;
+            font-size: 14px;
+        }
+        div.searchBelow{
+            margin-top: 3px;
+            margin-left: -20px;
+        }
+        div.searchBelow span{
+            color: #999;
+        }
+        div.searchBelow a{
+            padding: 0px 20px 0px 20px;
+            font-size: 14px;
+        }
+        /*-1 表示放在下面，如果修改为999，就会出现在上面把同一个位置出现的其他元素遮盖*/
+        img.simpleLogo{
+            position: absolute;
+            left: 10px;
+            top: 50px;
+            width: 140px;
+        }
+        body{
+            font-size:12px;
+            font-family:Arial;
+        }
+        a{
+            color:#999;
+        }
+        /*text-decoration:none:取消下划线*/
+        a:hover{
+            text-decoration:none;
+            color:#C40000;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <a href="#nowhere">
+        <img src="../img/site/simpleLogo.png" class="simpleLogo" id="simpleLogo">
+    </a>
+    <!-- method 规定用于发送 form-data 的 HTTP 方法 -->
+    <form method="post">
+        <div class="simpleSearchDiv pull-right">
+            <input type="text" placeholder="平衡车 原汁机" name="keyword">
+            <button type="button" class="searchButton">搜天猫</button>
+            <div class="searchBelow">
+                <span>
+                    <a href="#nowhere">冰箱</a>
+                    <span>|</span>
+                </span>
+                <span>
+                    <a href="#nowhere">空调</a>
+                    <span>|</span>
+                </span>
+                <span>
+                    <a href="#nowhere">女表</a>
+                    <span>|</span>
+                </span>
+                <span>
+                    <a href="#nowhere">男表</a>
+                </span>
+            </div>
+        </div>
+    </form>
+    <div style="clear:both"></div>
+</div>
+</body>
+</html>
