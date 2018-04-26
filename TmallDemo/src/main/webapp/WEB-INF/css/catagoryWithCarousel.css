@@ -1,0 +1,47 @@
+div.categoryWithCarousel{
+    width: 100%;
+}
+div.categoryWithCarousel div.headbar{
+    background-color: #DD2727;
+}
+div.categoryWithCarousel div.head{
+    width: 200px;
+    background-color: #C60A0A;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-left: 20px;
+    /*设置为内联块，可以做到不换行水平摆放可以设置大小*/
+    display: inline-block;
+}
+div.categoryWithCarousel div.rightMenu{
+    /*右侧子菜单设置为内联块，可以做到不换行水平摆放可以设置大小*/
+    display: inline-block;
+}
+div.categoryWithCarousel div.rightMenu a{
+    font-size: 16px;
+    color: white;
+    /*无下划线*/
+    text-decoration: none;
+}
+div.categoryWithCarousel div.rightMenu span{
+    margin: 0px 20px 0px 20px;
+}
+div.categoryWithCarousel div.rightMenu img{
+    height: 30px;
+}
+div.carousel-of-product{
+    max-width: 100%;
+    height: 510px;
+}
+img.carouselImage{
+    height: 510px !important;
+}
+img.catear {
+    position: absolute;
+    height: 15px;
+    display: none;
+}
+
