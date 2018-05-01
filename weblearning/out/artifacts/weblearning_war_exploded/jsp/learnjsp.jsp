@@ -18,10 +18,7 @@
 <%
     out.println("your ip address is " + request.getRemoteAddr());
 %>
-<%-- 使用表达式 --%>
-<p>
-    今天的日期是<%= (new java.util.Date()).toString()%>
-</p>
+
 <%-- 流程控制 --%>
 <% if(day==1||day==7) {%>
     <p>今天是周末</p>
